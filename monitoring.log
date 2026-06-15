@@ -1,0 +1,32 @@
+[2026-06-14 09:00:51] [INFO] [SYSTEM] === Monitoring cycle started ===
+[2026-06-14 09:00:51] [INFO] [web-server-01] Starting health check
+[2026-06-14 09:00:51] [OK] [web-server-01] Disk usage normal: 30.8% — 20.1GB free
+[2026-06-14 09:00:51] [OK] [web-server-01] Memory usage normal: 21.8% — 6.1GB available
+[2026-06-14 09:00:51] [OK] [web-server-01] Connectivity check passed — status 200
+[2026-06-14 09:00:51] [INFO] [web-server-01] Health check complete — HEALTHY
+[2026-06-14 09:00:51] [INFO] [db-server-01] Starting health check
+[2026-06-14 09:00:51] [OK] [db-server-01] Disk usage normal: 30.8% — 20.1GB free
+[2026-06-14 09:00:51] [OK] [db-server-01] Memory usage normal: 21.8% — 6.1GB available
+[2026-06-14 09:00:53] [OK] [db-server-01] Connectivity check passed — status 200
+[2026-06-14 09:00:53] [INFO] [db-server-01] Health check complete — HEALTHY
+[2026-06-14 09:00:53] [INFO] [api-server-01] Starting health check
+[2026-06-14 09:00:53] [OK] [api-server-01] Disk usage normal: 30.8% — 20.1GB free
+[2026-06-14 09:00:53] [OK] [api-server-01] Memory usage normal: 21.8% — 6.1GB available
+[2026-06-14 09:00:53] [OK] [api-server-01] Connectivity check passed — status 200
+[2026-06-14 09:00:53] [INFO] [api-server-01] Health check complete — HEALTHY
+[2026-06-14 17:59:19] [INFO] [SYSTEM] === Monitoring cycle started ===
+[2026-06-14 17:59:19] [INFO] [web-server-01] Starting health check
+[2026-06-14 17:59:19] [ALERT] [web-server-01] Disk usage critical: 30.8% (threshold: 5%)
+[2026-06-14 17:59:19] [OK] [web-server-01] Memory usage normal: 17.9% — 6.4GB available
+[2026-06-14 17:59:19] [OK] [web-server-01] Connectivity check passed — status 200
+[2026-06-14 17:59:19] [INFO] [web-server-01] Health check complete — DEGRADED
+[2026-06-14 17:59:19] [INFO] [db-server-01] Starting health check
+[2026-06-14 17:59:19] [OK] [db-server-01] Disk usage normal: 30.8% — 20.1GB free
+[2026-06-14 17:59:19] [OK] [db-server-01] Memory usage normal: 17.9% — 6.4GB available
+[2026-06-14 17:59:20] [OK] [db-server-01] Connectivity check passed — status 200
+[2026-06-14 17:59:20] [INFO] [db-server-01] Health check complete — HEALTHY
+[2026-06-14 17:59:20] [INFO] [api-server-01] Starting health check
+[2026-06-14 17:59:20] [OK] [api-server-01] Disk usage normal: 30.8% — 20.1GB free
+[2026-06-14 17:59:20] [OK] [api-server-01] Memory usage normal: 17.9% — 6.4GB available
+[2026-06-14 17:59:20] [OK] [api-server-01] Connectivity check passed — status 200
+[2026-06-14 17:59:20] [INFO] [api-server-01] Health check complete — HEALTHY

@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-06-14 17:59:20",
+  "summary": {
+    "total_servers": 3,
+    "healthy": 2,
+    "degraded": 1,
+    "total_alerts": 1
+  },
+  "servers": [
+    {
+      "server": "web-server-01",
+      "ip": "10.0.0.1",
+      "status": "DEGRADED",
+      "checks": {
+        "disk": "ALERT",
+        "memory": "OK",
+        "connectivity": "OK"
+      }
+    },
+    {
+      "server": "db-server-01",
+      "ip": "10.0.0.2",
+      "status": "HEALTHY",
+      "checks": {
+        "disk": "OK",
+        "memory": "OK",
+        "connectivity": "OK"
+      }
+    },
+    {
+      "server": "api-server-01",
+      "ip": "10.0.0.3",
+      "status": "HEALTHY",
+      "checks": {
+        "disk": "OK",
+        "memory": "OK",
+        "connectivity": "OK"
+      }
+    }
+  ],
+  "alerts": [
+    {
+      "timestamp": "2026-06-14 17:59:19",
+      "server": "web-server-01",
+      "message": "Disk usage critical: 30.8% (threshold: 5%)"
+    }
+  ]
+}
