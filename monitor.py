@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sqlite3
 import os
 import shutil
 import requests
@@ -11,7 +12,7 @@ SERVERS = [
         "name": "web-server-01",
         "ip": "10.0.0.1",
         "check_url": "http://wttr.in/Nairobi?format=j1",
-        "disk_threshold": 5,
+        "disk_threshold": 80,
         "memory_threshold": 80
     },
     {
@@ -138,6 +139,31 @@ def run_monitoring():
     
     return results
 
+def save_results_to_db(results):
+    conn = sqlite3.connect("servers.db")
+    cursor = conn.cursor()
+    
+    cursor.execute("CREATE TABLE IF NOT EXISTS monitoring_history (id INTEGER PRIMARY KEY AUTOINCREMENT, server_name TEXT, status TEXT, disk TEXT, memory TEXT, connectivity TEXT, checked_at TEXT)")
+    
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    
+    for result in results:
+        cursor.execute(
+            "INSERT INTO monitoring_history (server_name, status, disk, memory, connectivity, checked_at) VALUES (?, ?, ?, ?, ?, ?)",
+            (
+                result['server'],
+                result['status'],
+                result['checks']['disk'],
+                result['checks']['memory'],
+                result['checks']['connectivity'],
+                timestamp
+            )
+        )
+    
+    conn.commit()
+    conn.close()
+    print(f"\nResults saved to database — {len(results)} records inserted")    
+
 def generate_report(results):
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
@@ -172,3 +198,4 @@ def generate_report(results):
 # Main execution
 results = run_monitoring()
 generate_report(results)
+save_results_to_db(results)

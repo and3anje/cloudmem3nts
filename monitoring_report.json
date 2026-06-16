@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14 17:59:20",
+  "generated_at": "2026-06-16 09:02:59",
   "summary": {
     "total_servers": 3,
     "healthy": 2,
@@ -40,7 +40,7 @@
   ],
   "alerts": [
     {
-      "timestamp": "2026-06-14 17:59:19",
+      "timestamp": "2026-06-16 09:02:58",
       "server": "web-server-01",
       "message": "Disk usage critical: 30.8% (threshold: 5%)"
     }
